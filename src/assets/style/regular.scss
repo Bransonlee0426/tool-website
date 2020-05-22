@@ -1,0 +1,57 @@
+//font-family
+$PFTC: PingFangTC;
+$HEL: HelveticaNeue;
+//color
+$info: #4a4a4a;
+$white: white;
+$orange-btn: #daa270;
+$orange-btn-hover: #e1b58d;
+$basicBgc: #fbfbfb;
+$danger: #eb6050;
+
+@mixin centerBlock($top, $bottom) {
+  display: block;
+  margin: $top auto $bottom auto;
+}
+
+%myInput {
+  line-height: 40px;
+  border: 0px;
+  padding-left: 15px;
+  padding-right: -15px;
+  border-bottom: 1px solid #979797;
+  border-radius: 0px;
+  background-color: transparent;
+  font-size: 16px;
+  &::placeholder {
+    color: #9b9b9b;
+  }
+}
+
+%loginBtn {
+  font-weight: 500;
+  color: $white;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+%link {
+  text-decoration: none;
+  outline: 0px;
+  /* 未連結 */
+  &:link {
+    color: $white;
+  }
+  /* 已連結過 */
+  &:visited {
+    color: $white;
+  }
+  /* 滑鼠移至連結 */
+  &:hover {
+    opacity: 0.8;
+  }
+  /* 選擇的連結 */
+  &:active {
+    color: $white;
+  }
+}

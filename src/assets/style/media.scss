@@ -1,0 +1,37 @@
+$pc-media: 960px;
+$pcs-media: 959px;
+$pad-media: 760px;
+$pads-media: 759px;
+$phone-media: 480px;
+$phones-media: 479px;
+
+//電腦 960px 以上
+@mixin pc-width-up() {
+  @media all and (min-width: $pc-media) {
+    @content;
+  }
+}
+//電腦 960px 以下
+@mixin pc-width-below() {
+  @media all and (max-width: $pc-media) {
+    @content;
+  }
+}
+//平板 760px to 959px
+@mixin pad-width() {
+  @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
+    @content;
+  }
+}
+//小平板 480px to 759px
+@mixin small-pad-width() {
+  @media all and (min-width: $phone-media) and (max-width: $pads-media) {
+    @content;
+  }
+}
+//手機 479px 以下
+@mixin mobile() {
+  @media all and (max-width: $phones-media) {
+    @content;
+  }
+}

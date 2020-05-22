@@ -1,0 +1,7 @@
+fragment getAll on Contact{
+    id
+    name
+    createdAt
+    updatedAt
+    number
+}
